@@ -1,0 +1,20 @@
+
+
+Requisitos Sistemas de Biblioteca
+
+Funcional
+
+1 - Sistema tem que gerenciar, o registro de todos os livros com sua localização dentro da biblioteca assim facilitando onde e qual prateleira ele se localiza
+2 - Gerenciar para que foi emprestado o livro com as seguintes informação, se é Professor, Aluno ou Bibliotecário, Nome, Numero de Matricula ou RA, Numero de Telefone e Email, caso for aluno, qual curso e período.
+3 - Fazer um sistema que informa via email e whatsapp, quando começou o empréstimo do livre e qual a sua data de devolução. Também quando estives faltando 2 dias para a data de devolução do livro, o sistema manda uma mensagem via e-mail e whatsapp, e também envia um link para caso a pessoa queira prorrogar por ate 1 semana a devolução do livre.
+
+
+
+
+Não Funcional 
+
+1 - O sistema tem que ser suportado em qualquer dispositivo
+2 - O sistema tem que rodar online
+3 - o mesmo tem que suportar 500 requisições por minuto
+4 - o mesmo tem que suportar 200 usuários online
+5 - tem que ter um tempo de resposta de 2 segundo em pesquisas 

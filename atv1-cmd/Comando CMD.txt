@@ -1,0 +1,89 @@
+cd Desktop
+mkdir projeto_inicial
+cd projeto_inicial
+mkdir html
+mkdir css
+mkdir js
+mkdir assets
+dir
+
+cd html
+dir
+cd..
+
+cd csss
+dir
+cd..
+
+cd js
+dir
+cd..
+
+cd assets
+dir
+cd..
+
+cd html
+echo Bem-vindo ao Projeto > index html
+rename index index.html
+dir
+cd..
+
+cd css
+echo body { font-family: Arial, sans-serif; background-color: beige} > style.css
+dir
+cd..
+
+cd assets
+mkdir img
+mkdir fonts
+dir
+cd..
+
+cd css
+move style.css ..\assets
+cd..
+cd assets
+dir
+cd..
+
+cd js
+echo console.log("Script carregado!"); > script.js
+echo console.log("Aplicação Iniciada!"); > app.js
+dir
+cd..
+
+cd html
+copy index.html ..\assets
+cd..
+cd assets
+dir
+cd..
+
+cd js
+rename app.jd main.js
+dir
+cd..
+
+cd..
+tree /f
+cd projeto_inicial
+
+cd assets
+erase index.html
+dir
+cd..
+
+cd html
+notepad index.html
+
+
+
+
+
+
+
+ 
+
+
+

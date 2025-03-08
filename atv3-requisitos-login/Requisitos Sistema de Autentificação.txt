@@ -1,0 +1,21 @@
+Requisitos Funcionais (RF): Definem o que o sistema deve fazer.
+
+1- Registro para criar um usuário e senha
+2- Recuperação de usuário e senha 
+3- Loguin de usurio
+
+
+
+Requisitos Não Funcionais (RNF): Definem restrições de qualidade, desempenho e segurança.
+
+1- sistema que funcionar online
+2- funcionar em qualquer dispositivo e ser responsivel
+3- ter um sistema de criptográfica para senhas
+4- ter um suporte para 1000 pessoas logados 
+5- Ter um registro de usuários logados 
+
+Regras de Negócio (RN): Definem as regras da empresa.
+
+1- cada pessoa só pode ter um usuário no sistema
+2- cada usurio tem que ter um mínimo de caracteres e o máximo permitido
+3- cada senha tem que ter uma quantidade minha de caracteres e o máximo e ter 1 letra maiúscula e um caracteres espesificos
