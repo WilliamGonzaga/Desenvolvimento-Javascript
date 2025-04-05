@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Condicionais</title>
+</head>
+<body>
+        <h1>Exemplo de Condicionais</h1>
+
+        <script>
+            var idade = 17;
+
+            // var idade = prompt("Informe a Idade");
+            // idade = parseInt(idade)
+
+            if(idade < 18){
+                console.log("Menor de Idade")
+            }
+
+            else{
+                console.log("Maior de Idade")
+            }
+
+            if (idade < 18){
+                console.log("Menor De Idade")
+            } else if (idade === 18){
+                console.log("Tem 18 anos")
+            } else{
+                console.log("Maior de 18 anos")
+            }
+
+            var verificar = idade < 18 ? ("Menor Idade") : ("Maior de Idade")
+            console.log(verificar)
+            
+            
+            var nota = 7;
+            var falta = 3;       
+            
+            if (nota >= 7 && falta <= 4){
+                console.log("Aluno Aprovado")            
+            } else{
+                console.log("Aluno Reprovado")
+            }
+            
+             if (nota >= 7 || falta <= 4){
+                console.log("Aluno Aprovado")            
+            } else{
+                console.log("Aluno Reprovado")
+            }
+
+            var verificarnotafalta = nota >= 7 && falta < 4 ? ("Aluno Aprovado") : ("Aluno Reprovado")
+            console.log(verificarnotafalta)
+
+            var nome = "william";
+            if (nome){
+                console.log(nome);            
+            } else{
+                console.log("Nome não informado")
+            }
+
+            var nome = "";
+            var mensagem = "";
+            if (nome){
+                mensagem = nome;            
+            } else{
+                mensagem = "Nome não informado";
+            }
+            console.log(mensagem);
+
+            mensagem = nome ? nome : "Nome Não informado";
+            console.log(mensagem)
+
+            var nome = "william";
+            var idade = 18;
+
+            if (nome){
+                if(idade >= 18){
+                    console.log(nome, idade);
+                }else{
+                    console.log(nome);
+                }
+
+            } else{
+                console.log("Nome Não Informado");
+            }
+
+            var categoria = "2";
+
+            switch (categoria){
+                case "1" : 
+                    console.log("R$ 11,22");
+                    break
+                case "2" :
+                    console.log("R$ 17,37")
+                    break;
+                default :
+                    console.log("Categpria Livre, pode Passar!")
+                
+            }
+
+
+        </script>
+</body>
+</html>

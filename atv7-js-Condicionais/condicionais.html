@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 7 - Condicionais</title>
+</head>
+<body>  
+    <h1>Atividade 7 - Condicionais</h1>
+
+    <script>
+
+        //Exercício 1 - Verificar se o Numero é Maior ou Menor do número informado
+
+        var numero = 10;
+
+        if (numero > 10) {
+            console.log(`Maior Que ${numero}`)
+        }else{
+            console.log(`Menor que ${numero}`)
+        }
+
+        //Exercício 2 - Saber se o numero é par/impar
+
+        var numero = 5;
+        if (numero % 2 === 0){
+            console.log("Par")
+        }else{
+            console.log("Impar")
+        }
+
+        //Exercício 3 - Maior e Menor Numero
+
+        var numero1 = 40;
+        var numero2 = 30;
+        var numero3 = 50;
+
+        var maior = numero1;
+        var menor = numero1;
+
+        if (numero2 > maior)
+            maior = numero2
+
+        if (numero3 > maior)
+            maior = numero3
+
+        if (numero2 < menor)
+            menor = numero2
+
+        if (numero3 < menor)
+            menor = numero3
+
+        console.log(`Menor Número é ${menor} e o Maior Número é ${maior}` )
+
+
+        //Exercício 4 
+        //calcule simples => use switch
+        //var operação = + ou - ou / ou *
+        
+        var numero1 = 10
+        var numero2 = 20
+
+
+        var operador = prompt("Informe o operador logico ' + ' ' - ' ' / '  ' * '")
+
+        switch (operador) {
+            case "+" : {
+                var soma = numero1 + numero2
+                console.log(`Soma do número ${numero1} + número ${numero2} é ${soma}`);
+                break;
+            }
+            case "-" : {
+                var subtracao = numero1 - numero2;
+                console.log(`Subtração do número ${numero1} - número ${numero2} é ${subtracao}`);
+                break;
+            }
+            case "/" : {
+                var divisao = numero1 / numero2;
+                console.log(`Divisão do número ${numero1} / número ${numero2} é ${divisao}`);
+                break;
+            }
+            case "*" : {
+                var multiplicacao = numero1 * numero2;
+                console.log(`Multipliação do número ${numero1} + número ${numero2} é ${multiplicacao}`);
+                break;
+            }
+            default:
+                console.log("Operador Invalido");
+            
+        }
+    </script>
+    
+</body>
+</html>
