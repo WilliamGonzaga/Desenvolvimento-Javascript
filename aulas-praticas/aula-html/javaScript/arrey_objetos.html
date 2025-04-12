@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreys e Objetos</title>
+</head>
+<body>
+    <h1>Arreys e Objetos</h1>
+
+    <script>
+        var frutas = ["Morango", "Banana", "Abacaxi", "Uva", "Pera", "Kiwi"]
+
+        console.log(frutas)
+        console.log(frutas[0])
+        console.log(frutas.length)
+        console.log(frutas[3])
+        console.log(frutas[frutas.length-1])
+
+        //PUSH adiciona um item no Arrey
+        frutas.push("Maga")
+        console.log(frutas)
+
+
+        //Alterar item do Arrey na posição informada
+        frutas[1] = "Abacate";
+        console.log(frutas)
+
+
+        //Adiciona o item no indese 0
+        frutas.unshift("uva");
+        console.log(frutas);
+
+        //POP remove um item no Arrey
+        frutas.pop("Maga")
+        console.log(frutas)
+
+        //Remove o primeiro elemento do array 
+        frutas.shift();
+        console.log(frutas);
+
+        //Remove os itens do Array da posição que eu passar, com inicio e fim das posição
+        frutas.splice(1,1);
+        console.log(frutas);
+
+        //Remove os itens do Array da posição que eu passar, com inicio e fim das posição, tambem da para adicionar a posição
+        frutas.splice(1,0, "Abacate");
+        console.log(frutas);
+
+
+        //
+        console.log(frutas.slice(0,2));
+
+
+        //Ele tras se existe o item no Array, mas tenho que colocar da mesma maneira que esta inscrito ou inserido
+        console.log(frutas.includes("Morango"))
+
+        console.log(frutas.includes("morango"))
+
+        //Ele retorna a posição do item no Array, mas tenho que passar da mesma maneira que escrevi, se não ele passa posição -1 do arrey
+        console.log(frutas.indexOf("Morango"))
+        
+        console.log(frutas.indexOf("pesego"))
+        
+        //Objeto
+
+        var pessoa = {
+                "nome": "Joao",
+                "idade:": 25,
+                "altura": 1.75,
+                "peso": 70.5,
+                "cpf": "123.456.789-00"
+
+            }
+            
+        
+
+        console.log(pessoa)
+        console.log(pessoa.nome)
+        console.log(pessoa["nome"])
+
+        pessoa.cidade = "Presindete Prudente - SP";
+        console.log(pessoa.cidade);
+        
+        pessoa.idade = 18;
+
+        // Remove o o dado passado por parametro
+        delete pessoa.cidade;
+        console.log(pessoa);
+
+        //Verifica se tem o dados passado por parametro
+        console.log("nome" in pessoa);
+        console.log(Object.values(pessoa).includes("Joao"))
+
+
+
+
+    </script>
+    
+</body>
+</html>

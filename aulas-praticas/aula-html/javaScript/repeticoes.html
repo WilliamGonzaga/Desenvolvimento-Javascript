@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Repeções</title>
+</head>
+<body>
+    <h1>Exemplo de Repeções</h1>
+
+    <script>
+
+        for(var a = 0; a < 5; a++){
+            console.log("Repetição usando FOR: ",a)
+         }
+
+        for(var i = 0; i <= 10; i+=2){
+            console.log(i);
+        }
+
+        alunos = ["Joao","Maria","Jose","Pedro"];
+
+        //Pecorre todos os itens da lista iniciando da posição 0
+        for (var i = 0; i < alunos.length; i ++){
+            console.log(alunos[i])
+        }
+
+        //Pecorre todos os itens da lista
+        for (var aluno of alunos){
+            console.log(aluno);
+        }
+
+        //Apaga o o item da posição informada, quando apresenta ele mostra a parte vazia
+        delete alunos[0];
+        for (var aluno of alunos){
+            console.log(aluno);
+        }
+
+        var carro = {
+            "ano": 2025,
+            "modelo": "Fusca",
+            "cor": "Branco"        
+        }
+
+        for (var chave in carro){
+            console.log(carro[chave]);
+
+        }
+
+        var contador = 0
+        
+        while (contador < 5){
+           
+           console.log(contador);
+
+           contador++;
+       }
+
+       numero  = 0
+       soma = 0
+
+       while(numero <= 10){
+            numero++
+            soma += numero;
+            console.log("Soma: ",soma)
+          
+           
+       }
+       console.log(soma)
+
+
+       var x = 0;
+
+       while(x <= 20){
+            if(x === 5){
+                break
+            }
+            console.log(x);
+            x++;
+       }
+
+       var y = 0;
+
+       while(y <= 20){
+            y++;
+            if(y === 5){
+                continue
+                
+            }
+            console.log("Usando CONTINUE no WHILE para pular o numero 5: ",y);
+            
+       }
+    
+       var z = 0;
+       while(z <= 20){
+            z++;
+            if(z % 2 == 0){
+                continue
+                
+            }
+            console.log("Usando comtinue para vazer PAR IMPAR: ",z);
+            
+       }
+
+       var count = 10;
+
+       do {
+        console.log("Do While: ",count)
+        count++
+       }while(count < 5);
+
+
+
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
