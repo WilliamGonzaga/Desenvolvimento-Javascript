@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Repetições</title>
+</head>
+<body>
+    <h1>Exercícios Repetições</h1>
+
+    <script>
+
+        // 1 - Exercicios - Contador usando WHILE '1' ate '10'
+        console.log("1 - Exercicios - Contador usando WHILE '1' ate '10'")
+        var cont = 0
+
+        while(cont < 10){
+            cont++
+            console.log("Contador usando WHILE do '0' ate o '10'",cont)
+        }
+        console.log("--------------------------")
+        // 2 - Exercicios - Contador usando WHILE '10' ate '0'
+        console.log("2 - Exercicios - Contador usando WHILE '10' ate '0'")
+        var cont = 10
+
+        while(cont >= 0){
+            
+            console.log("Contador unsado WHILE do '10' ate o '0': ",cont)
+            cont--
+        }
+        console.log("--------------------------")
+
+
+        // 3 - Exercicios - Contador usando FOR '1' ate '10'
+        console.log("3 - Exercicios - Contador usando 'FOR' '1' ate '10'")
+        for (var cont = 1; cont <= 10; cont++){
+            console.log("Contador usando 'FOR' do '0' ate o '10'",cont)
+        }
+
+        console.log("--------------------------")
+        
+        // 4 - Exercicios - Contador usando FOR '10' ate '0'
+        console.log("4 - Exercicios - Contador usando 'FOR' '10' ate '0'")
+        for (var cont = 10; cont >= 0; cont--){
+            console.log("Contador usando 'FOR' do '10' ate o '0'",cont)
+        }
+
+        console.log("--------------------------")
+
+        // 5 - Exercício - Tabuada do 7 usando 'FOR' 
+        console.log("5 - Exercício - Tabuada do 7 usando 'FOR'")
+        for (var tabuada = 0; tabuada <=10; tabuada++){
+            console.log("7 x",tabuada,"=",(7 * tabuada))
+        }
+
+        console.log("--------------------------")
+
+        // 6 - Exercício - Tabuada do 7 usando 'WHILE' 
+        console.log("6 - Exercício - Tabuada do 7 usando 'WHILE'")
+
+        var tabuada = -1
+        while (tabuada <10){
+                tabuada++
+            console.log(`7 x ${tabuada} = ${(7 * tabuada)}`)
+        }
+
+        console.log("--------------------------")
+
+        // 7 - Exercícios - Mosntrar os números pares de '0' até '50', execeto '10' e '20' usando 'FOR'
+        console.log("7 - Exercícios - Mosntrar os números pares de '0' até '50', execeto '10' e '20' usando 'FOR'")
+
+        for(var num = 0; num <= 50; num+=2){
+            if(num == 10 || num == 20){
+                continue;
+            }
+            console.log(num);
+        }
+
+        // 8 - Exercícios - Mosntrar os números pares de '0' até '50', execeto '10' e '20' usando 'WHILE'
+        console.log("8 - Exercícios - Mosntrar os números pares de '0' até '50', execeto '10' e '20' usando 'WHILE'")
+
+        var num  = -2
+        while(num < 50){
+            num+=2
+            if(num == 10 || num == 20){
+                continue;
+            }
+            
+            console.log(num);
+            
+        }
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>
