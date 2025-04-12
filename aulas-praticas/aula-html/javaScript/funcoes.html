@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos De Funções</title>
+</head>
+<body>
+    <h1>Exemplos De Funções</h1>
+
+    <script>
+
+        function saudacao(){
+            
+            console.log("Olá Mundo!")
+        }
+
+        saudacao()
+
+        console.log("--------------------------")
+
+        function saudacaoComArgumento(nome){
+            
+            console.log("Olá Mundo! Eu Sou " + nome)
+        }
+
+        saudacaoComArgumento("William")
+
+        console.log("--------------------------")
+
+        function saudacaoComArgumentoOpcional(nome, saudação = "Olá"){
+            console.log(saudação + ", " + nome)
+        }
+        saudacaoComArgumentoOpcional("William")
+        saudacaoComArgumentoOpcional("William","Bom Dia")
+
+        console.log("--------------------------")
+
+        function soma(numero1, numero2){
+            console.log(`Soma do numero: ${numero1} + numero: ${numero2} é = ${numero1+numero2}`)
+        }
+
+        soma(1,2)
+        soma(5,4)
+
+        console.log("--------------------------")
+
+        function somaRetorno(numero1, numero2){
+            return (`Soma do numero: ${numero1} + numero: ${numero2} é = ${numero1+numero2}`)
+        }
+
+        var somar1 = somaRetorno(1,2)
+        var somar2 = somaRetorno(7,2)
+
+        console.log(somar1)
+        console.log(somar2)
+
+        console.log("--------------------------")
+
+        function media(m1,m2,m3){
+            return((m1+m2+m3)/3)
+        }
+
+        console.log(media(10,10,10))
+
+        var m = media(10,10,10) 
+        if (m > 7){
+            console.log("Passou")
+        }
+        else{
+            console.log("Até o Ano que vem!")
+        }
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
