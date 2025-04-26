@@ -6,10 +6,12 @@
     <title>Atividade Funções</title>
 </head>
 <body>
-    <h2>Atividade Funções</h2>
+    <h2>Atividade 9 - Funções</h2>
 
     <script>
-
+          
+          console.log("--------------- Atividade 1 - Par ou Impar---------------")
+          console.log(" ")
         // Função Para Verifgicar Se Um Numero é PAR ou IMPAR
 
         function verificarParImpar(numero){
@@ -25,11 +27,10 @@
         console.log(verificarParImpar(2))
 
         console.log(" ")
+        console.log("--------------- Atividade 2 - Tabuada Usando FOR---------------")
+        console.log(" ")
 
         // Gerar uma Tabuada, uma lista de Array[10,5,3,8,2]
-
-        console.log("--------------- Tabuada Usando FOR---------------")
-        console.log(" ")
 
         function tabuada(lista) {
             for (let i = 0; i < lista.length; i++) {
@@ -45,7 +46,7 @@
         tabuada([10, 5, 3, 8, 2]);
 
         console.log(" ")
-        console.log("--------------- Tabuada Usando While---------------")
+        console.log("--------------- Atividade 2 - Tabuada Usando While---------------")
         console.log(" ")
 
         function tabuadas(listas){
@@ -67,6 +68,55 @@
         tabuadas([10, 5, 3, 8, 2]);
 
 
+        console.log(" ")
+        console.log("--------------- Atividade 3 -  Cacular IMC---------------")
+        console.log(" ")
+
+        //IMC, Receber peso e altura e calcular imc
+        //Verificar se a Pessoa esta abaixo do peso, peso normal, sobrepeso ou obesidade
+        //Abaixo 18.5 => Abaixo do peso
+        //Entre 18.5e 24.9 => peso normal
+        //igual ou acima de 25 e abaixo de 29.9 => sobreso
+        // acima de 29.9 => obsidade
+
+        function imc(peso, altura){
+            var qualcularImc = (peso / (altura*altura))
+
+            if (qualcularImc <= 18.5){
+                console.log(`O IMC do Peso ${peso} Kg e Altura ${altura} é ${qualcularImc.toFixed(2)} o individo tem "Abaixo do peso"`)
+            }
+            else if(qualcularImc > 18.5 && qualcularImc <= 24.9) {
+                console.log(`O IMC do Peso ${peso} Kg e Altura ${altura} é ${qualcularImc.toFixed(2)} o individo tem "Peso Normal"`)
+            }
+            else if(qualcularImc > 24.9 && qualcularImc <= 29.9) {
+                console.log(`O IMC do Peso ${peso} Kg e Altura ${altura} é ${qualcularImc.toFixed(2)} o individo tem "Sobrepeso"`)
+            }
+            else if( qualcularImc > 29.9 ){
+                console.log(`O IMC do Peso ${peso} Kg e Altura ${altura} é ${qualcularImc.toFixed(2)} o individo tem "Obsidade"`)
+            }
+
+        }
+
+        imc(88, 1.69)
+        imc(80, 1.80)
+        imc(65, 1.90)
+
+        console.log(" ")
+        console.log("--------------- Atividade 4 - Verificar se é Bissexto---------------")
+        console.log(" ")
+        //Verificar se é bisexto ou não
+
+        function bissexto(ano){
+            if ((ano % 400 == 0) || (ano % 4 == 0 && ano % 100 != 0)){
+                console.log(`O ano ${ano} é Bissexto`)
+            } 
+            else{
+                console.log(`O ano ${ano} não é Bissexto`)
+            }
+        }
+        bissexto(2000)
+        bissexto(2001)
+        bissexto(2008)
 
 
 
