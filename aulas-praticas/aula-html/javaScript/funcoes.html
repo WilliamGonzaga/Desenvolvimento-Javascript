@@ -72,7 +72,25 @@
         }
 
 
+        console.log("--------------------------")
+        
+        // nota >= 7 e as faltas <=5
+        function verificarAprovacao(n1,n2,n3,numFaltas){
+            var media = ((n1+n2+n3)/3);
 
+            if (media >= 7 && numFaltas <= 5){
+                return "Aprovado";
+            }
+            else{
+                return "Reprovdo";
+            }
+        };
+       
+        
+
+        console.log("Situação: ", verificarAprovacao(10,8,5,3))
+        console.log("Situação: ", verificarAprovacao(10,8,5,6))
+        console.log("Situação: ", verificarAprovacao(5,8,5,4))
 
 
 

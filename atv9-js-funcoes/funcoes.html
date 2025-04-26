@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Funções</title>
+</head>
+<body>
+    <h2>Atividade Funções</h2>
+
+    <script>
+
+        // Função Para Verifgicar Se Um Numero é PAR ou IMPAR
+
+        function verificarParImpar(numero){
+            
+            if((numero % 2) == 0){
+                return `O número ${numero} é PAR`;
+            }
+            else{
+                return `O número ${numero} é IMPAR`;
+            }
+        }
+        console.log(verificarParImpar(3))
+        console.log(verificarParImpar(2))
+
+        console.log(" ")
+
+        // Gerar uma Tabuada, uma lista de Array[10,5,3,8,2]
+
+        console.log("--------------- Tabuada Usando FOR---------------")
+        console.log(" ")
+
+        function tabuada(lista) {
+            for (let i = 0; i < lista.length; i++) {
+                let numero = lista[i];
+                console.log(`\nTabuada do ${numero}:`);
+                for (let j = 0; j <= 10; j++) {
+                    console.log(`${numero} x ${j} = ${numero * j}`);
+                }
+            }
+        }
+
+        
+        tabuada([10, 5, 3, 8, 2]);
+
+        console.log(" ")
+        console.log("--------------- Tabuada Usando While---------------")
+        console.log(" ")
+
+        function tabuadas(listas){
+            let i = 0
+            while (i < listas.length){
+                let numero = listas[i]
+                console.log(`\nTabuada do ${numero}:`);
+
+                let j = 0
+                while(j <= 10){
+                    console.log(`${numero} x ${j} = ${numero * j}`);
+                    j++
+                }
+
+                i++
+            }
+        }
+
+        tabuadas([10, 5, 3, 8, 2]);
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
