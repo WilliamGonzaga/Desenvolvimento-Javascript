@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="py-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escopo e Bibliotecas</title>
+</head>
+<body>
+
+    <h2>Escopo e Bibliotecas</h2>
+
+
+    <script>
+
+        console.log(" ");
+        console.log("---------- Exemplo com VAR ---------- ");
+        console.log(" ");
+        
+        // VAR< ele subtitiu o valor se estiver no mesmo escopo
+
+        function exemploVar(){
+            var x = 10;
+
+            console.log("Antes do IF: ", x)
+
+            if (1==1){
+                var x = 20;
+                console.log("Dentro do IF: ",x);
+            }
+
+            console.log("Depois Fora do IF: ", x)
+        }
+
+        exemploVar();
+
+        console.log(" ");
+        console.log("---------- Exemplo com LET ---------- ");
+        console.log(" ");
+
+        // LET, ele não subtitiu o valor se estiver no mesmo escopo
+
+        function exemploLet(){
+            let x = 10;
+
+            console.log("Antes do IF: ", x)
+
+            if (1==1){
+                let x = 20;
+                console.log("Dentro do IF: ",x);
+            }
+
+            console.log("Depois Fora do IF: ", x)
+        }
+
+        exemploLet();
+
+        console.log(" ");
+        console.log("---------- Exemplo com CONSTANTE ---------- ");
+        console.log(" ");
+
+        //const é uma variavel imutavel
+
+        const pi = 3.1415;
+        console.log(pi);
+
+        // Mas se os dados estiver em um Array, Objeto ou Vetor, pode ser alterado os valores
+
+        const pessoa = {"Nome": "Maria"}
+        console.log(pessoa);
+        pessoa.nome = "Ana"
+        console.log(pessoa)
+        
+        console.log(" ");
+
+
+    </script>
+</body>
+</html>
