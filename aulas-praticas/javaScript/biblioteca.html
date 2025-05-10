@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliotecas</title>
+</head>
+<body>
+
+
+    <h2>Exmplo de BiBliotecas</h2>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+
+        // Inicio Biblioteca Math
+
+        console.log("***************Biblioteca Math***************");
+        var numero = 10.5;
+        console.log("Valor Original", numero);
+        console.log("Arrendondamaento para baixo", Math.floor(numero));
+        console.log("Arrendondamento para cima", Math.ceil(numero));
+        console.log("Arrendondamento para cima", Math.round(numero));
+
+        var array = [10,20,30,40,50];
+        console.log("Maior valor", Math.max(...array));
+        console.log("Maior valor", Math.max(10,20,30,40,50));
+        console.log("Maior valor", Math.min(...array));
+        console.log("Maior valor", Math.min(10,20,30,40,50));
+
+        console.log("Raiz sem biblioteca", 16**0.5);
+        console.log("Raiz com biblioteca", Math.sqrt(16));
+        var num = 16;
+        console.log("Raiz com biblioteca usando parametro", Math.sqrt(num));
+
+
+        console.log("Potência sem biblioteca", 2 ** 3);
+        console.log("Potência com biblioteca", Math.pow(2,3));
+
+        console.log("Valor de PI", Math.PI);
+        console.log("Valor de PI", Math.PI.toFixed(2));
+        
+        // Fim Biblioteca Math
+        console.log("")
+
+        // Inicio Biblioteca Date
+        console.log("***************Biblioteca Date***************")
+
+        var data = new Date();
+        console.log("Data atual: ", data);
+        console.log("Dia: ",data.getDate());
+        console.log("Mes: ", data.getMonth()+1);
+        console.log("Ano: ", data.getFullYear());
+        console.log("Hora: ", data.getHours());
+        console.log("Minutos: ", data.getMinutes());
+        console.log("Segundos: ", data.getSeconds());
+        console.log("Dia Da Semana : ", data.getDay());
+        // Fim Biblioteca Date
+        console.log("");
+
+        //Inicio Biblioteca jQuery
+
+        console.log("***************Biblioteca jQuery***************");
+
+        $("h2").css("color","red");
+
+        $("h2").css({
+            "color": "blue",
+            "font-falimy": "Arial",
+            "font-size": "100px",
+            "text-align": "center",
+
+
+        })
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
