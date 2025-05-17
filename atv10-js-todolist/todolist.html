@@ -23,11 +23,11 @@
 
     <div class="d-flex justify-content-between mt-4">
       <div class="upload-area">
-        <input type="file" name="upload" id="upload" accept=".json" class="d-none" onchange="uploadJson(arquivo)">
+        <input type="file" name="upload" id="upload" accept=".json" class="d-none" onchange="uploadJson(event)">
         <button id="btnUpload" class="btn btn-success" onclick="document.getElementById('upload').click()">Upload JSON</button>
       </div>
 
-      <button id="btnDownload" onclick="downloadJason()" class="btn btn-info">Download JSON</button>
+      <button id="btnDownload" onclick="downloadJson()" class="btn btn-info">Download JSON</button>
 
 
 
@@ -106,6 +106,7 @@
 
         atualiazarContador();
         salvarLocalStorage();
+        atualizarBotoes();
         
 
     };
@@ -124,9 +125,94 @@
         tarefas = JSON.parse(dados);
       }
       atualizarLista();
+
     };
 
+    function atualizarBotoes(){
+      let btnUpload = document.getElementById("btnUpload");
+      let btnDownload = document.getElementById("btnDownload")
+
+      if(tarefas.length > 0){
+        btnDownload.disabled = false;
+        btnUpload.disabled = true;
+      }
+      else{
+        btnDownload.disabled = true;
+        btnUpload.disabled = false;
+      }
+    }
+
+    function downloadJson(){
+      if (tarefas.length == 0){
+        alert("Não existem tarefas para baixar!")
+        return;
+      }
+
+      let dataStr = JSON.stringify(tarefas);  
+
+      //criar o arquivo temporario
+      let blob = new Blob([dataStr], {type:"application/jason"});
+      let url = URL.createObjectURL(blob);
+
+      //cia o link para baixar o arquivo
+      let a = document.createElement("a");
+      a.href = url;
+
+      a.download = "tarefas.json";
+      a.click();
+
+      //remove o link e url do arquivo
+      URL.revokeObjectURL(url);
+      a.remove();
+
+    };
+
+    function uploadJson(arquivo) {
+    let file = arquivo.target.files[0];
+    if (!file) {
+      alert("Arquivo não existe");
+      return;
+    }
+
+    let reader = new FileReader();
+
+    reader.onload = function (e) {
+      try {
+        let dados = JSON.parse(e.target.result);
+
+        if (!Array.isArray(dados)) {
+          alert("Arquivo JSON inválido!");
+          return;
+        }
+
+        for (let tarefa of dados) {
+          if (typeof tarefa !== "string") {
+            alert("Arquivo JSON inválido! Todas as tarefas devem ser texto!");
+            return;
+          }
+        }
+
+        if (tarefas.length > 0) {
+          alert("Para o upload funcionar, a lista tem que estar vazia!");
+          return;
+        }
+
+        tarefas = dados;
+        atualizarLista();
+
+      } catch (error) {
+        alert("Erro ao ler o arquivo JSON: " + error.message);
+      }
+    };
+
+    reader.readAsText(file);
+    arquivo.target.value = "";
+  }
+
+
+
     carregarLocalStorage();
+    atualizarBotoes();
 
   </script>
 </body>
