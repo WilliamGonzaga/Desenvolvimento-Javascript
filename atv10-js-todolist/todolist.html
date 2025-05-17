@@ -20,6 +20,21 @@
     <ul class="list-group mb-3" id="listaTarefas"></ul>
 
     <p class="text-end fw-bold">Total de tarefas: <span id="contador">0</span></p>
+
+    <div class="d-flex justify-content-between mt-4">
+      <div class="upload-area">
+        <input type="file" name="upload" id="upload" accept=".json" class="d-none" onchange="uploadJson(arquivo)">
+        <button id="btnUpload" class="btn btn-success" onclick="document.getElementById('upload').click()">Upload JSON</button>
+      </div>
+
+      <button id="btnDownload" onclick="downloadJason()" class="btn btn-info">Download JSON</button>
+
+
+
+    </div>
+
+
+
   </div>
 
 
@@ -90,6 +105,8 @@
         }
 
         atualiazarContador();
+        salvarLocalStorage();
+        
 
     };
     
@@ -98,12 +115,18 @@
     };
 
     function salvarLocalStorage(){
-
+      localStorage.setItem("tarefas", JSON.stringify(tarefas));
     };
 
     function carregarLocalStorage(){
-
+      let dados = localStorage.getItem("tarefas");
+      if (dados){
+        tarefas = JSON.parse(dados);
+      }
+      atualizarLista();
     };
+
+    carregarLocalStorage();
 
   </script>
 </body>
