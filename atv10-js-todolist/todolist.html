@@ -47,12 +47,26 @@
 
     }
 
-    function removerTarefa(){
-
+    function removerTarefa(item){
+      tarefas.splice(item,1);
+      atualizarLista();
     }
 
-    function editarTarefa(){
+    function editarTarefa(item){
+      let tarefaEditada = prompt("Editar a Tarefa: ", tarefas[item]);
+      if(tarefaEditada.trim() === ""){
+        alert("O texto da Tarefa não pode estar vazio!");
+        return;
+      };
 
+      if(tarefas.includes(tarefaEditada)){
+        alert("Tarefa ja existe na lista!");
+        return;
+      };
+
+    tarefas[item] = tarefaEditada;
+
+    atualizarLista();
     }
 
     function atualizarLista(){
@@ -66,9 +80,9 @@
             item.innerHTML = `
                 ${tarefas[i]}
                 <div class="float-end">
-                <button class="btn btn-sm btn-warning" onclick="editarTarefa()">Editar</button>
+                <button class="btn btn-sm btn-warning" onclick="editarTarefa(${i})">Editar</button>
                 
-                <button class="btn btn-sm btn-danger" onclick="removerTarefa()">Remover</button>    
+                <button class="btn btn-sm btn-danger" onclick="removerTarefa(${i})">Remover</button>    
                 </div>
             `;
 
@@ -77,11 +91,19 @@
 
         atualiazarContador();
 
-    }
+    };
     
     function atualiazarContador(){
+      document.getElementById("contador").textContent = tarefas.length;
+    };
 
-    }
+    function salvarLocalStorage(){
+
+    };
+
+    function carregarLocalStorage(){
+
+    };
 
   </script>
 </body>
