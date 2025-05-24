@@ -156,9 +156,14 @@
           <td>${u.bairro}</td>
           <td>${u.cidade}</td>
           <td>${u.estado}</td>
-        
-        
+
+          <td>
+            <button class="btn btn-sm btn-warning" onclick="editarUsuario(${i})">Editar</button>
+            <button class="btn btn-sm btn-danger" onclick="excluirUsuario(${i})">Excluir</button>
+          </td>
+
         `
+          tbody.appendChild(tr);
 
       }
 
@@ -170,10 +175,22 @@
 
     }
 
-    function excluirUsuario(){
+    function excluirUsuario(i){
 
+      if (confirm("Deseja Realmente Excluir o Usuário?")){
+        usuarios.splice(i,1);
+        localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+        listarUsuarios();
+      }
+
+      
+
+      cancelar()
     
     }
+
+    
 
     function cancelar(){
       document.getElementById("formUsuario").reset();
@@ -181,7 +198,7 @@
 
     }
     
-    
+    listarUsuarios();
 
 
 
